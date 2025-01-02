@@ -3,20 +3,20 @@ document.addEventListener("DOMContentLoaded", function() {
         <nav class="navbar">
             <div class="logo"><a href="index.html">KISADAN</a></div>
             <ul class="nav-menu">
-                <li><a href="#intro">기사단소개</a></li>
+                <li><a href="intro.html">기사단소개</a></li>
                 <li class="dropdown">
-                    <a href="#members">구성원</a>
+                    <a href="members.html">구성원</a>
                     <ul class="dropdown-content">
-                        <li><a href="#member1">이자현 대표</a></li>
-                        <li><a href="#member2">백종일 단장</a></li>
-                        <li><a href="#member3">여재호 단장</a></li>
-                        <li><a href="#member4">이동호 단장</a></li>
-                        <li><a href="#member5">임충일 단장</a></li>
-                        <li><a href="#member6">최여원 단장</a></li>
+                        <li><a href="members.html#member1">이자현 대표</a></li>
+                        <li><a href="members.html#member2">백종일 단장</a></li>
+                        <li><a href="members.html#member3">여재호 단장</a></li>
+                        <li><a href="members.html#member4">이동호 단장</a></li>
+                        <li><a href="members.html#member5">임충일 단장</a></li>
+                        <li><a href="members.html#member6">최여원 단장</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#services">업무영역</a>
+                    <a href="services.html">업무영역</a>
                     <ul class="dropdown-content">
                         <li><a href="service1.html">사업 아이템 개발 및 시장 검증 지원단</a></li>
                         <li><a href="service2.html">컨설팅 지원단</a></li>
@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", function() {
                         <li><a href="service6.html">기술개발 네트워크 지원단</a></li>
                     </ul>
                 </li>
-                <li><a href="#news">성공사례 및 소식</a></li>
-                <li><a href="#contact">상담&오시는길</a></li>
+                <li><a href="news.html">성공사례 및 소식</a></li>
+                <li><a href="contact.html">상담&오시는길</a></li>
             </ul>
         </nav>
     `;
