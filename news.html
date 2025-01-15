@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>기사단 소개</title>
     <link rel="stylesheet" href="style.css"> <!-- 스타일 시트 링크 -->
+    <link rel="stylesheet" href="news.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="navbar"></div> <!-- 네비게이션 바를 삽입할 곳 -->
@@ -16,110 +18,62 @@
     <div class="news-container">
       <div class="success-stories">
         <h3>성공사례</h3>
-        <ul class="news-list">
-          <li class="news-item">
-            <div class="news-image">
-              <img src="img/s008.jpg" alt="성공사례 1" />
-            </div>
-            <div class="news-text">
-              <h4>성공사례 제목</h4>
-              <p>성공사례 내용</p>
-            </div>
-          </li>
-          <li class="news-item">
-            <div class="news-image">
-              <img src="img/s009.jpg" alt="성공사례 2" />
-            </div>
-            <div class="news-text">
-              <h4>성공사례 제목</h4>
-              <p>성공사례 내용</p>
-            </div>
-          </li>
-          <li class="news-item">
-            <div class="news-image">
-              <img src="img/s010.jpg" alt="성공사례 3" />
-            </div>
-            <div class="news-text">
-              <h4>성공사례 제목</h4>
-              <p>성공사례 내용</p>
-            </div>
-          </li>
-          <li class="news-item">
-            <div class="news-image">
-              <img src="img/s011.jpg" alt="성공사례 4" />
-            </div>
-            <div class="news-text">
-              <h4>성공사례 제목</h4>
-              <p>성공사례 내용</p>
-            </div>
-          </li>
-          <li class="news-item">
-            <div class="news-image">
-              <img src="img/s012.jpg" alt="성공사례 5" />
-            </div>
-            <div class="news-text">
-              <h4>성공사례 제목</h4>
-              <p>성공사례 내용</p>
-            </div>
-          </li>
-          <!-- 추가 성공사례 항목들 -->
-        </ul>
+        <ul id="successList"></ul> <!-- 성공사례를 추가할 리스트 -->        
       </div>
       <div class="kisadan-news">
         <h3>기사단 소식</h3>
-        <ul class="news-list">
-          <li class="news-item">
-            <div class="news-image">
-              <img src="img/s013.jpg" alt="소식 1" />
-            </div>
-            <div class="news-text">
-              <h4>소식 제목</h4>
-              <p>소식 내용</p>
-            </div>
-          </li>
-          <li class="news-item">
-            <div class="news-image">
-              <img src="img/s014.jpg" alt="소식 2" />
-            </div>
-            <div class="news-text">
-              <h4>소식 제목</h4>
-              <p>소식 내용</p>
-            </div>
-          </li>
-          <li class="news-item">
-            <div class="news-image">
-              <img src="img/s015.jpg" alt="소식 3" />
-            </div>
-            <div class="news-text">
-              <h4>소식 제목</h4>
-              <p>소식 내용</p>
-            </div>
-          </li>
-          <li class="news-item">
-            <div class="news-image">
-              <img src="img/s016.jpg" alt="소식 4" />
-            </div>
-            <div class="news-text">
-              <h4>소식 제목</h4>
-              <p>소식 내용</p>
-            </div>
-          </li>
-          <li class="news-item">
-            <div class="news-image">
-              <img src="img/s017.jpg" alt="소식 5" />
-            </div>
-            <div class="news-text">
-              <h4>소식 제목</h4>
-              <p>소식 내용</p>
-            </div>
-          </li>
-          <!-- 추가 기사단 소식 항목들 -->
-        </ul>
+        <ul id="newsList"></ul> <!-- 기사단 소식을 추가할 리스트 -->
+        
       </div>
     </div>
+
+    <div class="admin-login" style="margin-left: 40px;">
+      <input type="password" id="adminPassword" placeholder="관리자 비밀번호"> 
+      <button id="loginButton">로그인</button>
+      <input type="password" id="newPassword" placeholder="새 관리자 비밀번호" style="display:none;">
+      <button id="setPasswordButton" style="display:none;">비밀번호 설정/수정</button>
+  </div>
+
+  <div class="upload-form" style="display: none; margin-left: 40px;">
+    <label for="postType">항목 선택란:</label>
+    <select id="postType" style="width: 100%; max-width: 200px; height: 25px;">
+        <option value="success">성공사례</option>
+        <option value="news">기사단 소식</option>
+    </select>
+
+    <label for="title">제목 입력:</label>
+    <input type="text" id="title" placeholder="제목을 입력하세요" required style="width: 100%; max-width: 800px; height: 40px;">
+
+    <label for="fontSize">글씨 크기:</label>
+    <select id="fontSize" style="width: 100%; max-width: 200px; height: 25px;">
+        <option value="16px">작게</option>
+        <option value="20px">보통</option>
+        <option value="24px">크게</option>
+    </select>
+
+    <label for="fontWeight">두꺼운 글씨:</label>
+    <input type="checkbox" id="fontWeight" style="width: 100%; max-width: 200px; height: 25px;"> 
+
+    <label for="textColor">글자색:</label>
+    <select id="textColor" style="width: 100%; max-width: 200px; height: 25px;">
+        <option value="black">검은색</option>
+        <option value="red">빨간색</option>
+        <option value="blue">파란색</option>
+        <option value="yellow">노란색</option>
+    </select>
+
+    <label for="imageUpload">파일 선택(정사각 이미지):</label>
+    <input type="file" id="imageUpload" accept="image/*" required>
+
+    <button id="addPost">추가</button>
+
+    <label for="description">내용 입력:</label>
+    <textarea id="description" rows="60" style="width: 100%; max-width: 1000px; height: 800px;" placeholder="내용을 입력하세요" required></textarea>
+</div>
   </section>
 
   <script src="navbar.js"></script>
+  <script src="newsInput.js"></script>
 
   </body>
   </html>

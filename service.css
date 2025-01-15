@@ -1,0 +1,24 @@
+.service-content {
+    padding: 5rem 2rem;
+    display: flex; /* 중앙 정렬을 위한 Flexbox 사용 */
+    justify-content: center; /* 콘텐츠 중앙 정렬 */
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center; /* 세로 중앙 정렬 */
+    margin: 20px 0; /* 상하 여백 추가 */
+    margin-top: 3rem;
+}
+
+/* 특정 크기로 조정하고 싶을 경우 */
+.image-column {
+    width: 100%; /* 전체 너비 사용 */
+    justify-content: space-between; /* 이미지 간격을 고르게 */
+}
+
+
+.service-image {
+    max-width: 49%; /* 부모 요소의 너비에 맞게 조정 */
+    height: auto; /* 높이를 자동으로 조정하여 비율 유지 */
+}

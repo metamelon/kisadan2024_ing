@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>기사단 소개</title>
     <link rel="stylesheet" href="style.css"> <!-- 스타일 시트 링크 -->
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="navbar"></div> <!-- 네비게이션 바를 삽입할 곳 -->
@@ -15,27 +16,29 @@
     <h2>상담 & 오시는 길</h2>
     <div class="contact-container">
       <div class="contact-info">
-        <h3>연락처 정보</h3>
-        <p>대표메일: kisadan2024@kisadan.org</p>
-        <p>주소: 경기도 용인시 기흥구 강남로 12 스카이 프라자 8층 805호</p>
-        <p>-  전철 이용시, 용인 에버라인 강남대역 2번출구에서 1분거리</p>
-        <p>-  버스 이용시, 시내버스 66번, 10번 광역버스 5001번, 5005번 </p>
-        <p>전화: 031-322-2357</p>
-        <p>팩스: 050-4081-9057</p>
-
+        <p class="query">상담 문의</p><br>
+        <p>문의를 남겨주시면 담당컨설턴트가 빠르게 답변 드리겠습니다.</p><br>
         <form class="contact-form" action="mailto:kisadan2024@kisadan.org" method="post" enctype="text/plain">
-          <input type="text" placeholder="상담자 이름" required />
+          <p>성함</p>
+          <input type="text" placeholder="성함" required />
+          <p>이메일</p>
           <input type="email" placeholder="이메일" required />
-          <textarea placeholder="문의내용" required></textarea>
-          <button type="submit">보내기</button>
+          <p>상담 문의 내용</p>
+          <textarea placeholder="어떤 내용을 문의하고 싶으신가요?" required></textarea>
+          <button type="submit">제출하기</button>
         </form>
       </div>
-      <div class="map">
-        <!-- 지도 이미지 또는 임베드 -->
-        <img
-          src="img/s007.png"
-          alt="오시는 길"
-        />
+      <div class="location">
+        <p class="loc01">기사단 다짐</p><br>
+        <p class="loc-text1">중소기업의 성공적인 도약이 지속가능하도록 지원하는 과학기술인협동조합이 되겠습니다.</p><br><br><br>
+        <p class="loc02">ADDRESS</p><br>
+        <p class="loc-text2">경기도 용인시 기흥구 강남로 12 스카이 프라자 8층 805호</p><br><br><br>
+        <p class="loc03">WORKING HOURS</p><br>
+        <p class="loc-text3">9AM - 6PM, Mon to Fri</p><br><br><br>
+        <p class="loc04">CONTACT</p><br>
+        <p class="loc-text4">E-mail : kisadan2024@kisadan.org</p>
+        <p class="loc-text4">전화: 031-322-2357</p>
+        <p class="loc-text4">팩스: 050-4081-9057</p>
       </div>
     </div>
   </section>

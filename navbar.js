@@ -18,12 +18,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 <li class="dropdown">
                     <a href="services.html">업무영역</a>
                     <ul class="dropdown-content">
-                        <li><a href="service1.html">사업 아이템 개발 및 시장 검증 지원단</a></li>
+                        <li><a href="service1.html">IR네트워크 지원단</a></li>
                         <li><a href="service2.html">컨설팅 지원단</a></li>
                         <li><a href="service3.html">교육지원단</a></li>
                         <li><a href="service4.html">기업혁신 지원단</a></li>
-                        <li><a href="service5.html">R&D 기획지원단</a></li>
-                        <li><a href="service6.html">기술개발 네트워크 지원단</a></li>
+                        <li><a href="service5.html">R&D기획 지원단</a></li>
+                        <li><a href="service6.html">사업아이템 개발 및 시장검증 지원단</a></li>
                     </ul>
                 </li>
                 <li><a href="news.html">성공사례 및 소식</a></li>
@@ -38,9 +38,11 @@ document.addEventListener("DOMContentLoaded", function() {
         </footer>
     `;
 
+    
     document.getElementById("navbar").innerHTML = navbar;
     document.body.insertAdjacentHTML('beforeend', footer);
 
+        
     // 네비게이션 링크에 클릭 이벤트 추가
     document.querySelectorAll('.nav-menu a').forEach(link => {
         link.addEventListener('click', function(e) {
@@ -52,5 +54,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 window.location.href = baseUrl + targetId;
             }
         });
+    // 마우스 오른쪽 버튼 클릭 방지
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
     });
 });
